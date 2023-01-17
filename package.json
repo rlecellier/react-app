@@ -22,9 +22,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint:ci": "eslint 'src/**/*.{js,jsx,ts,tsx}' --max-warnings 0",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "size": "yarn build && yarn size-limit"
   },
+  "size-limit": [
+    {
+      "path": "build/static/**/*.{js,css,svg,woff,woff2,png,ttf,html}",
+      "limit": "500kb"
+    }
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -44,12 +52,14 @@
     ]
   },
   "devDependencies": {
+    "@size-limit/preset-app": "^8.1.1",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.4",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "2.8.3"
+    "prettier": "2.8.3",
+    "size-limit": "^8.1.1"
   }
 }
