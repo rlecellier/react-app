@@ -16,9 +16,6 @@ const Content = ({ className, children }: IContentProps) => (
   >
     {children}
   </Container>
-  // <div className={cn(styles['app-template-content'], className)}>
-  //   {children}
-  // </div>
 )
 
 export default Content
