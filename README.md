@@ -1,6 +1,8 @@
-# Storybook
+# External applications
 
-Storybook available [here](https://63c7f80fd9d11cb8f306b0c4-wzjnvmbkzg.chromatic.com)
+- [storybook/chromatic](https://63c7f80fd9d11cb8f306b0c4-wzjnvmbkzg.chromatic.com)
+- [codebeat](https://codebeat.co/projects/github-com-rlecellier-react-app-main/)
+- [circleci](https://app.circleci.com/pipelines/github/rlecellier/react-app)
 
 # Getting Started with Create React App
 
