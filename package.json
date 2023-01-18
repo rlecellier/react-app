@@ -22,6 +22,7 @@
     "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.1",
     "sass": "^1.57.1",
+    "storybook": "^6.5.15",
     "typescript": "^4.9.4",
     "web-vitals": "^2.1.4"
   },
@@ -33,7 +34,9 @@
     "lint:ci": "eslint 'src/**/*.{js,jsx,ts,tsx}' --max-warnings 0",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "yarn lint --fix",
-    "size": "yarn build && yarn size-limit"
+    "size": "yarn build && yarn size-limit",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "size-limit": [
     {
@@ -45,6 +48,16 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -61,13 +74,27 @@
   },
   "devDependencies": {
     "@size-limit/preset-app": "^8.1.1",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
+    "@storybook/node-logger": "^6.5.15",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.4",
     "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-storybook": "^0.6.10",
     "prettier": "2.8.3",
-    "size-limit": "^8.1.1"
+    "prop-types": "^15.8.1",
+    "size-limit": "^8.1.1",
+    "webpack": "^5.75.0"
   }
 }

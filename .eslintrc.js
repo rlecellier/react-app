@@ -4,6 +4,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'plugin:import/recommended',
+    'plugin:storybook/recommended',
   ],
   env: {
     browser: true,
@@ -44,7 +45,10 @@ module.exports = {
           'index',
         ],
         'newlines-between': 'always',
-        alphabetize: { order: 'asc', caseInsensitive: true },
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
       },
     ],
   },
