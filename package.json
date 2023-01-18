@@ -36,7 +36,8 @@
     "lint:fix": "yarn lint --fix",
     "size": "yarn build && yarn size-limit",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=0c1824feadbb"
   },
   "size-limit": [
     {
@@ -87,6 +88,7 @@
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "chromatic": "^6.14.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.4",
@@ -96,5 +98,7 @@
     "prop-types": "^15.8.1",
     "size-limit": "^8.1.1",
     "webpack": "^5.75.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "reac-app@0.1.0"
 }
