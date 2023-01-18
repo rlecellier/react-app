@@ -1,3 +1,4 @@
+import Container from '@mui/material/Container'
 import cn from 'classnames'
 import React from 'react'
 
@@ -9,9 +10,15 @@ interface IContentProps {
 }
 
 const Content = ({ className, children }: IContentProps) => (
-  <div className={cn(styles['app-template-content'], className)}>
+  <Container
+    className={cn(styles['app-template-content'], className)}
+    component="main"
+  >
     {children}
-  </div>
+  </Container>
+  // <div className={cn(styles['app-template-content'], className)}>
+  //   {children}
+  // </div>
 )
 
 export default Content

@@ -14,6 +14,6 @@ const renderSignIn = () => {
 
 test('renders title', () => {
   renderSignIn()
-  const titleElement = screen.getByText(/SignIn Page/i)
+  const titleElement = screen.getByRole('heading', { name: /Sign in/i })
   expect(titleElement).toBeInTheDocument()
 })

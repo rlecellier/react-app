@@ -1,20 +1,31 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
+import Avatar from '@mui/material/Avatar'
+import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
+import * as React from 'react'
 
-const SignIn = (): JSX.Element => {
+import FormSignIn from 'components/FormSignIn'
+
+export default function SignIn() {
   return (
-    <div>
-      <h1>SignIn Page</h1>
-      <ul>
-        <li>
-          <Link to="/sign-in">sign-in</Link>
-        </li>
-        <li>
-          <Link to="/home">home</Link>
-        </li>
-      </ul>
-    </div>
+    <Container maxWidth="xs">
+      <Box
+        sx={{
+          marginTop: 8,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <LockOutlinedIcon />
+        </Avatar>
+        <Typography component="h1" variant="h5">
+          Sign in
+        </Typography>
+        <FormSignIn />
+      </Box>
+    </Container>
   )
 }
-
-export default SignIn
